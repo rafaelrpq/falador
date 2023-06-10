@@ -1,0 +1,51 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    font-family: open sans, arial, sans serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    color: #222;
+    text-shadow: 0 0 .2rem #fff;
+    background-color: #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+button {
+    border-radius : 50%;
+    border: .1rem solid;
+    width: 4.8rem;
+    height: 4.8rem;
+    margin: .7rem;
+    font-weight: bold;
+    background-color: #555;
+    color:#fff;
+    text-shadow: 0 0 .2rem #000;
+}
+
+summary {
+    /*color: #aaa;*/
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+details:first-child button {
+    width: 9.6rem;
+    height: 9.6rem;
+    border-radius: 1.5rem;
+    background-size: contain !important;
+    display: inline-flex;
+    justify-content: center;
+    align-items: end;
+}
+
+
