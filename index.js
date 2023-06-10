@@ -23,10 +23,24 @@ function falar (texto) {
 
 let buttons = document.querySelectorAll ('button')
 buttons.forEach (btn => {
+    this.oncontextmenu = function (e) {
+        e.preventDefault()
+        e.stopPropagation()
+        e.stopImmediatePropagation();
+        return false;
+    }
+
     let texto = btn.getAttribute ('data-value');
     btn.innerHTML = texto;
-    btn.style.background = `url(res/bichos/${texto}.avif)`;
-    btn.addEventListener ('click', () => {
+    try {
+        if (texto.length > 1) {
+            btn.style.background = `url(res/bichos/${texto}.avif)`;
+        }
+    } catch (e) {
+        // console.log (e)
+    }
+    btn.addEventListener ('click', (e) => {
+        e.preventDefault ();
         falar (texto);
     });
 })
