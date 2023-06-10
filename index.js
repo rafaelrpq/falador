@@ -55,3 +55,18 @@ details.forEach((targetDetail) => {
     });
   });
 });
+
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener ('load', () => {
+        navigator.serviceWorker.register ('sw.js')
+        .then (reg => {
+            console.log ('registrado!')
+            console.log (reg)
+        })
+        .catch (err => {
+            console.log ('falha ao registrar')
+            console.log (err)
+        })
+    })
+}
