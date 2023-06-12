@@ -23,24 +23,28 @@
         <script src="index.js" defer></script>
     </head>
     <body>
+        <header>
+            <button data-value="Animais" data-type="switcher" class="ativo"></button>
+            <button data-value="Números" data-type="switcher"></button>
+            <button data-value="Letras" data-type="switcher"></button>
+            <button data-value="Cores" data-type="switcher"></button>
+        </header>
         <main>
-            <details>
-                <summary>Animais</summary>
-                <button data-value="gato"></button>
-                <button data-value="cachorro"></button>
-                <button data-value="galinha"></button>
+            <section id="animais">
+                <button data-value="gato" data-type="bichos"></button>
+                <button data-value="cachorro" data-type="bichos"></button>
+                <button data-value="galinha" data-type="bichos"></button>
                 <br>
-                <button data-value="vaca"></button>
-                <button data-value="porco"></button>
-                <button data-value="cavalo"></button>
+                <button data-value="vaca" data-type="bichos"></button>
+                <button data-value="porco" data-type="bichos"></button>
+                <button data-value="cavalo" data-type="bichos"></button>
                 <br>
-                <button data-value="leão"></button>
-                <button data-value="elefante"></button>
-                <button data-value="tubarão"></button>
+                <button data-value="leão" data-type="bichos"></button>
+                <button data-value="elefante" data-type="bichos"></button>
+                <button data-value="tubarão" data-type="bichos"></button>
                 <br>
-            </details>
-            <details>
-                <summary>Números</summary>
+            </section>
+            <section id="números">
                 <button data-value="1"></button>
                 <button data-value="2"></button>
                 <button data-value="3"></button>
@@ -54,9 +58,8 @@
                 <button data-value="9"></button>
                 <br>
                 <button data-value="0"></button>
-            </details>
-            <details>
-                <summary>Letras</summary>
+            </section>
+            <section id="letras">
                 <button data-value="q"></button>
                 <button data-value="w"></button>
                 <button data-value="e"></button>
@@ -85,7 +88,7 @@
                 <button data-value="b"></button>
                 <button data-value="n"></button>
                 <button data-value="m"></button>
-            </details>
+            </section>
         </main>
     </body>
 </html>

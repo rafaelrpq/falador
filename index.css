@@ -5,22 +5,58 @@ html {
 * {
     font-family: open sans, arial, sans serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     height: 100vh;
+    width: 100vw;
     color: #222;
     text-shadow: 0 0 .2rem #fff;
     background-color: #777;
+    font-size: 1.6rem;
+    overflow-x: clip;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    height: 3.6rem;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    font-size: 1.6rem;
+    z-index: 1;
 }
 
-button {
+main {
+    position: absolute;
+    top: 8rem;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    height: -webkit-fill-available;
+    width: max-content;
+    overflow-y: overlay;
+}
+
+section {
+    display: block;
+    width: 100vw;
+    margin: auto;
+}
+
+section#animais {
+    display: block;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+section > button {
     border-radius : 50%;
     border: .1rem solid;
     width: 4.8rem;
@@ -33,18 +69,43 @@ button {
     text-shadow: 0 0 .2rem #000;
 }
 
-button:active {
+section > button:active {
     box-shadow: none;
     filter: brightness(120%);
 }
 
-summary {
-    /*color: #aaa;*/
-    font-size: 2rem;
+
+header > button {
+    height: 2.4rem;
+    width: 9rem;
+    color: #333;
+    border: 1px outset rgba(0,0,0,0.3);
     font-weight: bold;
+    box-shadow: 0 0 .3rem rgba(0,0,0,.7);
 }
 
-details:first-child button {
+header > button:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+header > button:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+header > button:active {
+    filter: brightness(130%);
+    box-shadow: none;
+    border: 1px inset rgba(0,0,0,0.3);
+    background-color: #779;
+}
+
+.ativo {
+    background-color: #779;
+    border: 1px inset rgba(0,0,0,0.3);
+    box-shadow: none;
+}
+
+button[data-type="bichos"] {
     width: 9.6rem;
     height: 9.6rem;
     border-radius: 1.5rem;
@@ -53,5 +114,3 @@ details:first-child button {
     justify-content: center;
     align-items: end;
 }
-
-
