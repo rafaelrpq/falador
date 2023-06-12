@@ -1,14 +1,16 @@
 html {
     font-size: 62.5%;
+    overflow: hidden;
 }
 
 * {
-    font-family: open sans, arial, sans serif;
+    font-family: arial, sans serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
 body {
+    display: block;
     margin: 0;
     height: 100vh;
     width: 100vw;
@@ -16,11 +18,11 @@ body {
     text-shadow: 0 0 .2rem #fff;
     background-color: #777;
     font-size: 1.6rem;
-    overflow-x: clip;
+    overflow: hidden;
 }
 
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 3.6rem;
     width: 100vw;
@@ -31,32 +33,33 @@ header {
 }
 
 main {
-    position: absolute;
-    top: 8rem;
+    position: relative;
     display: flex;
     flex-direction: row;
     text-align: center;
     justify-content: center;
     height: -webkit-fill-available;
     width: max-content;
-    overflow-y: overlay;
+    overflow: hidden;
+}
+
+div {
+    height: 5rem;
+    content: '&nbsp';
 }
 
 section {
-    display: block;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
     width: 100vw;
+    height: 100vh;
     margin: auto;
 }
 
-section#animais {
-    display: block;
-    flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-}
-
-section > button {
+section > span > button {
     border-radius : 50%;
     border: .1rem solid;
     width: 4.8rem;
@@ -69,7 +72,7 @@ section > button {
     text-shadow: 0 0 .2rem #000;
 }
 
-section > button:active {
+section > span > button:active {
     box-shadow: none;
     filter: brightness(120%);
 }
@@ -105,7 +108,7 @@ header > button:active {
     box-shadow: none;
 }
 
-button[data-type="bichos"] {
+button[data-type="bichos"], button[data-color]  {
     width: 9.6rem;
     height: 9.6rem;
     border-radius: 1.5rem;
@@ -113,4 +116,10 @@ button[data-type="bichos"] {
     display: inline-flex;
     justify-content: center;
     align-items: end;
+}
+
+@media (min-width: 700px) and (orientation: landscape) {
+    body {
+        /*display*/
+    }
 }
