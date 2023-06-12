@@ -1,7 +1,11 @@
 
 /****************************************************************************/
 
-var synth   = window.speechSynthesis
+var synth = null;
+
+window.onload = function () {
+    synth = window.speechSynthesis
+}
 
 function ptBR (voices) {
     for (v of voices) {
@@ -35,18 +39,36 @@ buttons.forEach (btn => {
     }
 
     let texto = btn.getAttribute ('data-value');
+    let tipo = btn.getAttribute ('data-type');
     btn.innerHTML = texto;
     try {
-        if (texto.length > 1) {
-            btn.style.background = `url(res/bichos/${texto}.avif)`;
+        switch (tipo) {
+            case 'bichos' :
+                btn.style.background = `url(res/bichos/${texto}.avif)`;
+                break
+            case 'switcher' :
+                btn.addEventListener ('click', (e) => {
+                    e.preventDefault ();
+                    location.href = './#'+texto.toLowerCase ();
+
+                    for (let iBtn of buttons) {
+                        iBtn.classList.remove ('ativo');
+                    }
+
+                    btn.classList.add ('ativo')
+                });
+            default :
+                btn.style.backgroundColor = btn.getAttribute ('data-color') ?? btn.style.backgroundColor;
         }
+
+        btn.addEventListener ('click', (e) => {
+            e.preventDefault ();
+            falar (texto);
+        });
     } catch (e) {
         // console.log (e)
     }
-    btn.addEventListener ('click', (e) => {
-        e.preventDefault ();
-        falar (texto);
-    });
+
 })
 
 const details = document.querySelectorAll("details");
