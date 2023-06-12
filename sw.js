@@ -1,9 +1,10 @@
 var DYNAMIC_CACHE = 'cache';
 var urlsToCache = [
+  './',
   './index.html',
   './index.css',
-  './manifest.json',
   './index.js',
+  './manifest.json',
   './res/icons/128.png',
 ];
 

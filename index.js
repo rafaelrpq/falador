@@ -1,4 +1,6 @@
 
+/****************************************************************************/
+
 var synth   = window.speechSynthesis
 
 function ptBR (voices) {
@@ -10,13 +12,15 @@ function ptBR (voices) {
 }
 
 function falar (texto) {
-    let voices  = synth.getVoices ()
+    // let voices  = synth.getVoices ()
     let speaker = new SpeechSynthesisUtterance ();
-    speaker.lang = 'pt-BR'
-    speaker.voice = ptBR (voices);
+    // speaker.lang = 'pt-BR'
+    // speaker.voice = ptBR (voices);
 
     speaker.text = texto
 
+
+    synth.cancel ()
     synth.speak (speaker);
 }
 
