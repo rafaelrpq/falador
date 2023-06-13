@@ -2,9 +2,11 @@
 /****************************************************************************/
 
 var synth = null;
+var speaker = null
 
 window.onload = function () {
     synth = window.speechSynthesis
+    speaker = new SpeechSynthesisUtterance ();
 }
 
 function ptBR (voices) {
@@ -17,7 +19,7 @@ function ptBR (voices) {
 
 function falar (texto) {
     // let voices  = synth.getVoices ()
-    let speaker = new SpeechSynthesisUtterance ();
+    // let speaker = new SpeechSynthesisUtterance ();
     // speaker.lang = 'pt-BR'
     // speaker.voice = ptBR (voices);
 
