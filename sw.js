@@ -1,4 +1,4 @@
-var DYNAMIC_CACHE = 'v0.3';
+var DYNAMIC_CACHE = 'v0.2';
 var urlsToCache = [
   './index.html',
   './index.css',
@@ -30,6 +30,7 @@ var urlsToCache = [
 ];
 
 self.addEventListener ('install', function (event) {
+    self.skipWaiting ();
     event.waitUntil (
         caches.open (DYNAMIC_CACHE)
         .then (function (cache) {
@@ -41,7 +42,7 @@ self.addEventListener ('install', function (event) {
 
 self.addEventListener('message', function (event) {
     if (event.data.action === 'skipWaiting') {
-        self.skipWaiting();
+        self.skipWaiting ();
     }
 });
 
@@ -67,3 +68,15 @@ self.addEventListener ('fetch', (event) => {
         return response;
     }) ());
 })
+
+self.addEventListener('activate', (event) => {
+    event.waitUntil ((async () => {
+        const cacheNames = await caches.keys();
+
+        await Promise.all (cacheNames.map (async (cacheName) => {
+            if (self.cacheName !== cacheName) {
+            await caches.delete (cacheName);
+            }
+        }));
+    }) ());
+});
