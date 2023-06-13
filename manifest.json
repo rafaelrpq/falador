@@ -20,7 +20,7 @@
         "sizes": "512x512",
         "type": "image/png"
     }],
-    "id": "com.github.rafaelpq.falador",
+    "id": "falador",
     "scope": "./",
     "start_url": "./",
     "description": "Fala o item clicado",
