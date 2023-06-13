@@ -6,13 +6,12 @@
         "sizes": "128x128",
         "type": "image/png"
     },{
-        "src": "./res/icons/192.png",
-        "sizes": "192x192",
-        "type": "image/png",
-        "purpose": "maskable"
-    },{
         "src": "./res/icons/256.png",
         "sizes": "256x256",
+        "type": "image/png"
+    },{
+        "src": "./res/icons/256[mask].png",
+        "sizes": "384x384",
         "type": "image/png",
         "purpose": "maskable"
     },{
