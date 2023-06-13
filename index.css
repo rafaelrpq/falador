@@ -111,8 +111,8 @@ header > button:active {
 }
 
 button[data-type="bichos"], button[data-color]  {
-    width: 9.6rem;
-    height: 9.6rem;
+    width: 8rem;
+    height: 8rem;
     border-radius: 1.5rem;
     background-size: contain !important;
     display: inline-flex;
