@@ -21,12 +21,12 @@ if ('serviceWorker' in navigator) {
                 // Has network.state changed?
                 switch (newWorker.state) {
                     case 'installed':
-                    if (navigator.serviceWorker.controller) {
-                        // new update available
-                        showUpdateBar();
-                    }
-                    // No update available
-                    break;
+                        if (navigator.serviceWorker.controller) {
+                            // new update available
+                            showUpdateBar();
+                        }
+                        // No update available
+                        break;
                 }
             });
         });
