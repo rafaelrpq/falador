@@ -50,15 +50,11 @@ buttons.forEach (btn => {
                 btn.addEventListener ('click', (e) => {
                     e.preventDefault ();
                     location.href = './#'+texto.toLowerCase ();
-
                     for (let iBtn of buttons) {
                         iBtn.classList.remove ('ativo');
                     }
-
                     btn.classList.add ('ativo')
                 });
-            default :
-                btn.style.backgroundColor = btn.getAttribute ('data-color') ?? btn.style.backgroundColor;
         }
 
         btn.addEventListener ('click', (e) => {
@@ -66,22 +62,10 @@ buttons.forEach (btn => {
             falar (texto);
         });
     } catch (e) {
-        // console.log (e)
+        console.log (e)
     }
 
 })
-
-const details = document.querySelectorAll("details");
-details.forEach((targetDetail) => {
-  targetDetail.addEventListener("click", () => {
-    details.forEach((detail) => {
-      if (detail !== targetDetail) {
-        detail.removeAttribute("open");
-      }
-    });
-  });
-});
-
 
 if ('serviceWorker' in navigator) {
     window.addEventListener ('load', () => {

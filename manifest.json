@@ -1,5 +1,5 @@
 {
-    "name": "Falador",
+    "name": "Fala o item clicado",
     "short_name": "Falador",
     "icons": [{
         "src": "./res/icons/128.png",
@@ -20,7 +20,7 @@
         "sizes": "512x512",
         "type": "image/png"
     }],
-    "id": "./falador",
+    "id": "com.github.rafaelpq.falador",
     "scope": "./",
     "start_url": "./",
     "description": "Fala o item clicado",
