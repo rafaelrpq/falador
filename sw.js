@@ -1,4 +1,4 @@
-var DYNAMIC_CACHE = 'cache-v0.1';
+var DYNAMIC_CACHE = 'cache-v0.01';
 var urlsToCache = [
   './index.html',
   './index.css',
