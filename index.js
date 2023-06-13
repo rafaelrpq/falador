@@ -50,11 +50,15 @@ buttons.forEach (btn => {
                 btn.addEventListener ('click', (e) => {
                     e.preventDefault ();
                     location.href = './#'+texto.toLowerCase ();
+
                     for (let iBtn of buttons) {
                         iBtn.classList.remove ('ativo');
                     }
+
                     btn.classList.add ('ativo')
                 });
+            default :
+                btn.style.backgroundColor = btn.getAttribute ('data-color') ?? btn.style.backgroundColor;
         }
 
         btn.addEventListener ('click', (e) => {
