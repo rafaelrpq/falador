@@ -10,14 +10,8 @@ export class AppManager {
         function showUpdateBar() {
             document.body.appendChild (snackbar);
             snackbar.className = 'show';
-            console.log ('PWA updating...')
+            console.log ('Updating PWA...')
         }
-
-        //The click event on the pop up notification
-        // document.getElementById ('reload').addEventListener ('click', function() {
-        //     console.log ('requesting PWA update')
-        //     newWorker.postMessage ({ action: 'skipWaiting' });
-        // });
 
         if ('serviceWorker' in navigator) {
 

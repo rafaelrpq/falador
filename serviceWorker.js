@@ -1,4 +1,4 @@
-var DYNAMIC_CACHE = 'v20230626-1325';
+var DYNAMIC_CACHE = 'v20230626-1338';
 var urlsToCache = [
   './index.html',
   './index.css',
@@ -17,7 +17,7 @@ self.addEventListener ('install', function (event) {
     event.waitUntil (
         caches.open (DYNAMIC_CACHE)
         .then (function (cache) {
-            console.log ('Opened cache');
+            // console.log ('Opened cache');
             return cache.addAll (urlsToCache);
         })
     );
