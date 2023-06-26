@@ -4,7 +4,6 @@ import { Falador } from './Falador.js'
 AppManager.Activate ();
 /****************************************************************************/
 
-
 document.addEventListener ('DOMContentLoaded', () => {
     let dialog = document.createElement ('dialog');
     let button = document.createElement ('button');
