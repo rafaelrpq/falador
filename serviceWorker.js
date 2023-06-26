@@ -1,16 +1,14 @@
-var DYNAMIC_CACHE = 'v20230626-1713';
+var DYNAMIC_CACHE = 'v20230626-1727';
 var urlsToCache = [
-  './index.html',
-  './index.css',
-  './index.js',
-  './AppManager.js',
-  './Falador.js',
-  './manifest.json',
+    './index.html',
+    './index.css',
+    './snackbar.css',
+    './index.js',
+    './appManager.js',
+    './manifest.json',
+    './res/icons/128.png',
 
-  './snackbar.css',
-
-  './res/bichos/',
-  './res/icons/128.png',
+    './res/bichos/',
 ];
 
 self.addEventListener ('install', function (event) {
@@ -18,7 +16,7 @@ self.addEventListener ('install', function (event) {
     event.waitUntil (
         caches.open (DYNAMIC_CACHE)
         .then (function (cache) {
-            // console.log ('Opened cache');
+            console.log ('Opened cache');
             return cache.addAll (urlsToCache);
         })
     );
