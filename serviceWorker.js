@@ -1,4 +1,4 @@
-var DYNAMIC_CACHE = 'v20230626-1727';
+var DYNAMIC_CACHE = 'v20230626-1729';
 var urlsToCache = [
     './index.html',
     './index.css',
@@ -8,7 +8,20 @@ var urlsToCache = [
     './manifest.json',
     './res/icons/128.png',
 
-    './res/bichos/',
+      './res/bichos/abelha.avif',
+      './res/bichos/baleia.avif',
+      './res/bichos/cachorro.avif',
+      './res/bichos/cavalo.avif',
+      './res/bichos/coelho.avif',
+      './res/bichos/elefante.avif',
+      './res/bichos/galinha.avif',
+      './res/bichos/gato.avif',
+      './res/bichos/jacaré.avif',
+      './res/bichos/leão.avif',
+      './res/bichos/macaco.avif',
+      './res/bichos/peixe.avif',
+      './res/bichos/porco.avif',
+      './res/bichos/tartaruga.avif',
 ];
 
 self.addEventListener ('install', function (event) {
