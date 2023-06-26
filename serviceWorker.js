@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-var DYNAMIC_CACHE = 'v20230615-1332';
-=======
-var DYNAMIC_CACHE = 'v20230626-1819';
->>>>>>> 9cdd786 (removendo modularização)
 var urlsToCache = [
   './index.html',
   './index.css',
