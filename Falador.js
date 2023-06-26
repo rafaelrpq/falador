@@ -1,4 +1,4 @@
-export class Falador {
+class Falador {
     static synth = window.speechSynthesis;
     static speaker = new SpeechSynthesisUtterance ();
 

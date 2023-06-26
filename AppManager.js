@@ -1,4 +1,4 @@
-export class AppManager {
+class AppManager {
 
     static Activate () {
         let newWorker;
