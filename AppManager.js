@@ -3,13 +3,16 @@ export class AppManager {
     static Activate () {
         let newWorker;
 
-        let snackbar = document.createElement ('div');
+        let snackbar = document.createElement ('dialog');
         snackbar.setAttribute ('id', 'snackbar');
-        snackbar.innerHTML = '<span>Nova versão disponível.</span> <a href="#" id="reload">ATUALIZANDO</a>'
+        snackbar.innerHTML = '<p>Nova versão disponível.</p> <a href="#" id="reload">ATUALIZANDO</a>'
 
         function showUpdateBar() {
+            let dialog = document.querySelector ('dialog')
+            if (dialog) dialog.close ()
             document.body.appendChild (snackbar);
             snackbar.className = 'show';
+            snackbar.showModal ();
             console.log ('Updating PWA...')
         }
 

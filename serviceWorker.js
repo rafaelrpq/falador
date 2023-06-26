@@ -1,4 +1,4 @@
-var DYNAMIC_CACHE = 'v20230626-1353';
+var DYNAMIC_CACHE = 'v20230626-1643';
 var urlsToCache = [
   './index.html',
   './index.css',
@@ -41,6 +41,13 @@ self.addEventListener ('fetch', (event) => {
         if (!response || response.status !== 200 || response.type !== 'basic') {
             return response;
         }
+
+        var cacheControlHeader = response.headers.get('Cache-Control');
+        var cacheOptions = {
+            headers: {
+                'Cache-Control': cacheControlHeader || 'max-age=3600' // Definir o TTL padrão para 1 hora (3600 segundos)
+            }
+        };
 
         if (urlsToCache) {
             const responseToCache = response.clone ();

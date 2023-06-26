@@ -57,35 +57,24 @@ section {
     width: 100vw;
     height: 100vh;
     margin: auto;
-    flex-wrap: wrap;
 }
 
-section button {
+section > span > button {
     border-radius : 50%;
     border: .1rem solid;
     width: 4.8rem;
     height: 4.8rem;
     margin: .7rem;
     font-weight: bold;
-    background-color: mediumslateblue;
+    background-color: #555;
     box-shadow: .5rem .5rem .3rem rgba(0,0,0,0.7);
     color:#fff;
-    text-shadow: .1rem .1rem .1rem #000, .1rem -0.1rem .1rem #000,
-                 -0.1rem .1rem .1rem #000, -0.1rem -0.1rem .1rem #000;
+    text-shadow: 0 0 .2rem #000;
 }
 
-section button:active {
+section > span > button:active {
     box-shadow: none;
     filter: brightness(120%);
-}
-
-section#animais {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
 }
 
 
@@ -93,38 +82,36 @@ header > button {
     height: 2.4rem;
     width: 9rem;
     color: #333;
-    border: .1rem outset rgba(0,0,0,0.3);
+    border: 1px outset rgba(0,0,0,0.3);
     font-weight: bold;
     box-shadow: 0 0 .3rem rgba(0,0,0,.7);
 }
 
 header > button:first-child {
-    border-radius: .5rem 0 0 .5rem;
+    border-radius: 5px 0 0 5px;
 }
 
 header > button:last-child {
-    border-radius: 0 .5rem .5rem 0;
+    border-radius: 0 5px 5px 0;
 }
 
 header > button:active {
     filter: brightness(130%);
     box-shadow: none;
-    border: .1rem inset rgba(0,0,0,0.3);
-    /*background-color: #779;*/
-    background-color: mediumslateblue;
+    border: 1px inset rgba(0,0,0,0.3);
+    background-color: #779;
 }
 
 .ativo {
     background-color: #77d;
     color: #fff;
     border: 1px inset rgba(0,0,0,0.3);
-    text-shadow: .1rem .1rem .1rem #000;
     box-shadow: none;
 }
 
 button[data-type="bichos"], button[data-color]  {
-    width: 9rem;
-    height: 9rem;
+    width: 9.6rem;
+    height: 9.6rem;
     border-radius: 1.5rem;
     background-size: contain !important;
     display: inline-flex;
@@ -136,47 +123,4 @@ button[data-type="bichos"], button[data-color]  {
     body {
         /*display*/
     }
-}
-
-dialog {
-    border : .2rem solid #000;
-    border-radius : .7rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    flex-direction: column;
-
-    text-align: center;
-}
-
-dialog button {
-    display: block;
-    margin-top: 2rem;
-    margin-top: 2rem;
-
-    border: .3rem solid rgba(0,0,0,0.3);
-    border-radius: .5rem;
-    color: #fff;
-    background-color: mediumslateblue;
-    box-shadow: .3rem .3rem .5rem #000;
-    text-shadow: .1rem .1rem 0 #000;
-
-    font-size: 1.4rem;
-    font-weight: bold;
-
-    height: 2.8rem;
-    width: 10rem;
-
-    outline: none;
-}
-
-dialog button:active {
-    box-shadow: none;
-    filter: brightness(135%);
-}
-
-dialog::backdrop {
-    backdrop-filter: blur(5px);
 }
