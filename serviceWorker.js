@@ -1,4 +1,4 @@
-var DYNAMIC_CACHE = '20230626-1957'
+var DYNAMIC_CACHE = '20230626-2014'
 var urlsToCache = [
   'AppManager.js',
   'Falador.js',
@@ -8,7 +8,7 @@ var urlsToCache = [
   'manifest.json',
   'res/icons/128.png',
 
-  // './res/bichos/',
+  '/res/bichos/',
 ];
 self.addEventListener ('install',  async function (event) {
     self.skipWaiting ();
