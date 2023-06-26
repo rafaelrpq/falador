@@ -1,15 +1,16 @@
-var DYNAMIC_CACHE = 'v20230626-1654';
+var DYNAMIC_CACHE = 'v20230626-1713';
 var urlsToCache = [
   './index.html',
   './index.css',
-  './snackbar.css',
   './index.js',
   './AppManager.js',
   './Falador.js',
   './manifest.json',
-  './res/icons/128.png',
+
+  './snackbar.css',
 
   './res/bichos/',
+  './res/icons/128.png',
 ];
 
 self.addEventListener ('install', function (event) {

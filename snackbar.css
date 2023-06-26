@@ -1,9 +1,12 @@
 #snackbar a {
-    color: #aaf;
+    color: mediumslateblue;
     cursor: pointer;
     text-decoration: none;
     font-weight: bold;
     outline: none;
+    margin-top: 2rem;
+    text-shadow: 0 0 .1rem #000;
+
 }
 
 #snackbar.show {

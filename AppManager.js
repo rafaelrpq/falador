@@ -5,7 +5,7 @@ export class AppManager {
 
         let snackbar = document.createElement ('dialog');
         snackbar.setAttribute ('id', 'snackbar');
-        snackbar.innerHTML = '<p>Nova versão disponível.</p> <a href="#" id="reload">ATUALIZANDO</a>'
+        snackbar.innerHTML = '<span>Nova versão disponível.</span> <a href="#" id="reload">ATUALIZANDO</a>'
 
         function showUpdateBar() {
             let dialog = document.querySelector ('dialog')
