@@ -1,39 +1,18 @@
+import { AppManager } from './AppManager.js'
+import { Falador } from './Falador.js'
 
+AppManager.Activate ();
 /****************************************************************************/
 
-var synth = null;
-var speaker = null
 
-window.onload = function () {
-    synth = window.speechSynthesis
-    speaker = new SpeechSynthesisUtterance ();
-}
-
-function ptBR (voices) {
-    for (v of voices) {
-        if (v.lang === 'pt-BR') {
-            return (v)
-        }
-    }
-}
-
-function falar (texto) {
-    // let voices  = synth.getVoices ()
-    // let speaker = new SpeechSynthesisUtterance ();
-    // speaker.lang = 'pt-BR'
-    // speaker.voice = ptBR (voices);
-
-    speaker.text = texto
-
-
-    synth.cancel ()
-    synth.speak (speaker);
-}
-
+document.addEventListener ('DOMContentLoaded', () => {
+    // document.querySelector ('button.ativo').click ();
+    Falador.falar ('animais');
+})
 
 let buttons = document.querySelectorAll ('button')
 buttons.forEach (btn => {
-    this.oncontextmenu = function (e) {
+    btn.oncontextmenu = function (e) {
         e.preventDefault()
         e.stopPropagation()
         e.stopImmediatePropagation();
@@ -65,7 +44,7 @@ buttons.forEach (btn => {
 
         btn.addEventListener ('click', (e) => {
             e.preventDefault ();
-            falar (texto);
+            Falador.falar (texto);
         });
     } catch (e) {
         console.log (e)
@@ -73,16 +52,4 @@ buttons.forEach (btn => {
 
 })
 
-// if ('serviceWorker' in navigator) {
-//     window.addEventListener ('load', () => {
-//         navigator.serviceWorker.register ('sw.js')
-//         .then (reg => {
-//             console.log ('registrado!')
-//             console.log (reg)
-//         })
-//         .catch (err => {
-//             console.log ('falha ao registrar')
-//             console.log (err)
-//         })
-//     })
-// }
+// document.querySelector ('.ativo').click ();
