@@ -6,7 +6,7 @@ var urlsToCache = [
   'index.html',
   'index.js',
   'manifest.json',
-  // './res/icons/128.png',
+  'res/icons/128.png',
 
   // './res/bichos/',
 ];
