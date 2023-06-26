@@ -1,3 +1,4 @@
+var DYNAMIC_CACHE = '20230626-1830';
 var urlsToCache = [
   './index.html',
   './index.css',
