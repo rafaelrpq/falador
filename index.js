@@ -1,4 +1,5 @@
-
+import { AppManager } from './AppManager.js'
+import { Falador } from './Falador.js'
 
 AppManager.Activate ();
 /****************************************************************************/
