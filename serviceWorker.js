@@ -1,4 +1,4 @@
-var DYNAMIC_CACHE = 'v20230627-1203'
+var DYNAMIC_CACHE = 'v20230628-2248'
 var urlsToCache = [
   'AppManager.js',
   'Falador.js',
