@@ -4,31 +4,42 @@ import { Falador } from './Falador.js'
 AppManager.Activate ();
 /****************************************************************************/
 
-document.addEventListener ('DOMContentLoaded', () => {
-    let dialog = document.createElement ('dialog');
-    let button = document.createElement ('button');
+// document.addEventListener ('DOMContentLoaded', () => {
+//     let dialog = document.createElement ('dialog');
+//     let button = document.createElement ('button');
 
-    dialog.innerHTML = "Bem vindo ao aplicativo Falador<br>Clique no botão abaixo para iniciar"
-    button.innerHTML = "Iniciar";
-    button.onclick = () => {
-        dialog.close ()
-        location.href='#animais'
-        Falador.falar ('animais');
-    }
+//     dialog.innerHTML = "Bem vindo ao aplicativo Falador<br>Clique no botão abaixo para iniciar"
+//     button.innerHTML = "Iniciar";
+//
+//     button.onclick = () => {
+//         dialog.close ()
+//         location.href='#animais'
+//         Falador.falar ('animais');
+//     }
 
-    document.addEventListener ('keydown', e => {
-        if (e.key === 'Escape') {
-            e.preventDefault ();
-        }
-    })
+//     document.addEventListener ('keydown', e => {
+//         if (e.key === 'Escape') {
+//             e.preventDefault ();
+//         }
+//     })
 
-    document.body.appendChild (dialog);
-    dialog.appendChild (button);
-    dialog.showModal ();
+//     document.body.appendChild (dialog);
+//     dialog.appendChild (button);
+//     dialog.showModal ();
 
-})
+// // })
 
-let buttons = document.querySelectorAll ('button')
+// let dialog = document.querySelector ('dialog');
+// let iniciar = document.querySelector ('dialog button');
+// // dialog.showModal ()
+
+// iniciar.addEventListener ('click', () => {
+//     dialog.close ()
+//     //         location.href='#animais'
+//     //         Falador.falar ('animais');
+// })
+
+let buttons = document.querySelectorAll ('button ')
 buttons.forEach (btn => {
     btn.oncontextmenu = function (e) {
         e.preventDefault()
